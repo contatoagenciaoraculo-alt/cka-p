@@ -56,6 +56,18 @@ export default function RootLayout({
           async
           defer
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.pixelId = "68ba7a6094e8f240591215c3";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `,
+          }}
+        />
       </head>
       <body className={`${nunito.variable} ${poppins.variable} font-sans antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
